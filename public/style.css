@@ -49,3 +49,9 @@ img{
 #bootstrap-overide .list-group-item{
   border: none;
 }
+
+.signup{
+  margin-left: 23%;
+  font-size: 15px;
+  color: blueviolet;
+}
