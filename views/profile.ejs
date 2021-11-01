@@ -15,20 +15,25 @@
 <div class="container">
 
     <div class="page-header text-center">
+      <% if(messages.length !== 0) {%>
         <h1><span class="fa fa-star"></span><%= messages[messages.length - 1].name + "'s Fitness Manager" %></h1>
+        <%} %>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 
+  
     <div class="jumbotron text-center">
+      <% if(messages.length !== 0) {%>
       <ul class="list-group list-group-horizontal">
       <li class="list-group-item name" data-name="<%= messages[0].name%>"><%= messages[messages.length - 1].name%></li>
       <li class="list-group-item" data-height="<%= messages[0].height%>"><%= 'Height: ' + messages[messages.length - 1].height + " inches"%></li>
       <li class="list-group-item" data-weight="<%= messages[0].weight%>"><%= 'Weight: ' + messages[messages.length - 1].weight + "lbs"%></li>
       <li class="list-group-item" data-bmi="<%= messages[0].bodymass %>"><%= 'BMI: ' + messages[messages.length - 1].bodymass%></li>
       <li class="list-group-item" data-class="<%= messages[0].class%>"><%= 'Classification: ' + messages[messages.length - 1].class%></li>
-      
     </ul>
+    <%} %>
     </div>
+    
     <div class="form-group">
       <label for="exampleFormControlSelect1">Target Weekly Weight Gain/Loss</label>
       <select class="form-control goal" id="exampleFormControlSelect1" name="weeklygoal">
@@ -50,10 +55,14 @@
 
     
     <ul class="list-group list-group-horizontal">
+      <% if(messages.length !== 0) {%>
       <li class="list-group-item"><button  data-name="<%= messages[messages.length - 1].name%>" data-weight="<%= messages[messages.length - 1].weight%>" data-bmi="<%= messages[messages.length - 1].bodymass %>" data-height="<%= messages[messages.length - 1].height%>" type="submit" class="btn btn-primary btn-lg btn-block submit">Update Data</button></li>
     </ul>
-  
+    <%} %>
+
+    
     <div class="jumbotron text-center">
+      <% if(messages.length !== 0) {%>
       <ul class="list-group list-group-horizontal">
       <li class="list-group-item"><%= 'BMR: ' + messages[messages.length - 1].estBMR + 'kcal' %></li>
       <li class="list-group-item"><%= 'Dietary Intake: ' + messages[messages.length - 1].diet + 'kcal' %></li>
@@ -65,9 +74,11 @@
       <% if(messages[messages.length - 1].estTime < 0) {%>
         <li class="list-group-item"><%= 'ETA: ' + ' Not Possible' %></li>
         <% } %>
-      
+        
     </ul>
+    <%} %>
     </div>
+   
 
 
 
