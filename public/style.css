@@ -1,0 +1,51 @@
+#bootstrap-overide{
+  word-wrap:break-word;
+  background-color: aliceblue;
+}
+img{
+  height: 200px;
+}
+
+#bootstrap-overide .form-inline{
+  flex-flow: nowrap;
+}
+
+#bootstrap-overide .btn-outline-success{
+  margin-right: 0.5%;
+ 
+}
+
+#bootstrap-overide .form-inline{
+  margin-right: 4%;
+}
+
+#bootstrap-overide .navbar-brand{
+  font-size: 1.55rem;
+  font-family: 'Balsamiq Sans', cursive;
+  color: tomato;
+}
+
+.header{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 2.5rem;
+}
+
+#bootstrap-overide .input-group{
+  width: 50%;
+  margin-left: 26%;
+
+}
+
+#bootstrap-overide .btn-outline-danger{
+  display: block;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+#bootstrap-overide .list-group-horizontal{
+  justify-content: space-evenly;
+}
+
+#bootstrap-overide .list-group-item{
+  border: none;
+}
